@@ -1,0 +1,16 @@
+<h2 class="text-center">Registration new account</h2>
+<form calss="form-group">
+    <label>Login</label>
+    <input type="text" 
+           class="form-control" 
+           [(ngModel)]="form.login" 
+           [ngModelOptions]="{standalone: true}" >
+    <label>Password</label>
+    <input type="password" 
+           class="form-control" 
+           [(ngModel)]="form.password" 
+           [ngModelOptions]="{standalone: true}">
+    <button type="button"
+            (click)="onSubmit()" 
+            class="btn btn-success">Submit</button>
+</form>

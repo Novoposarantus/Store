@@ -1,0 +1,30 @@
+
+<form class="form-group">
+    <label for="nameInput">Name</label>
+    <input type="text" 
+           id="nameInput" 
+           class="form-control" 
+           [(ngModel)]="form['name']"
+           [ngModelOptions]="{standalone: true}">
+    <label for="nameInput">Category</label>
+    <input type="text" 
+           id="nameInput" 
+           class="form-control" 
+           [(ngModel)]="form['category']"
+           [ngModelOptions]="{standalone: true}">
+    <label for="nameInput">Price</label>
+    <input type="number" 
+           id="nameInput" 
+           class="form-control" 
+           [(ngModel)]="form['price']"
+           [ngModelOptions]="{standalone: true}">
+    <label for="existBox">Exist in store</label>
+    <input [checked]="form['exist']"
+           (change)="form.exist = !form.exist"
+           type="checkBox" 
+           id="existBox" 
+           class="form-check">
+    <button type="button" 
+            (click)="onSubmit()" 
+            class="btn btn-success">Submit</button>
+</form>

@@ -1,0 +1,25 @@
+tr:nth-child(2n) td{
+    background-color: rgb(218, 218, 218);
+}
+.true{
+    background-color: rgb(80, 245, 39) !important;
+}
+.false{
+    background-color: rgb(248, 33, 33) !important;
+    color: white !important;
+}
+
+.list-enter-active, .list-leave-active{
+    transition: opacity 0.5s;
+}
+
+.list-enter{
+    opacity: 0;
+}
+
+.list-leave-to{
+    opacity: 0;
+}
+*{
+    color: black;
+}

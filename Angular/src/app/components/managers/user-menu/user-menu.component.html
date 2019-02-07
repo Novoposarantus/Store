@@ -1,0 +1,19 @@
+<div>
+<app-table *ngIf="!selectedUser"
+          [data]="users"
+          button="select"
+          (buttonClick)="onClick($event)">
+  </app-table>
+  <div *ngIf="selectedUser">
+      <h2>{{selectedUser.userName}}</h2>
+      <select class="form-control" [(ngModel)]="selectedUser.roleName">
+        <option *ngFor="let role of roles"
+                [value]="role.name">
+            {{role.name}}</option> 
+      </select>
+      <div class="d-flex justify-content-center">
+          <button class="btn" (click)="back()">Back</button>
+          <button class="btn btn-success" (click)="submit()">Submit</button>
+      </div>
+  </div>
+</div>

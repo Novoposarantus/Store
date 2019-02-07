@@ -1,0 +1,15 @@
+.btn{
+    margin: 10px 5px;
+}
+.border{
+    padding: 10px;
+    margin: 5px;
+    transition: background 0.3s, color 0.3s;
+}
+.checked{
+    background-color: #0278ff;
+    color: white;
+}
+.role:hover{
+    cursor: pointer;
+}

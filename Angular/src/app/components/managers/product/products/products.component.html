@@ -1,0 +1,32 @@
+<button *ngIf="deletedData.length > 0"
+        (click)="changeShow()"
+        class="btn header">
+  Show delete table
+</button>
+<button *ngIf="showDeleteButton && deletedData.length > 0"
+        (click)="clickDeleteAllButton()"
+        class="btn header">
+  Delete from data base
+</button>
+<button *ngIf="showSourceButton"
+        (click)="clickSourceButton()"
+        class="btn header">
+  Show product 
+  source
+</button>
+<div class="main">
+<app-table
+  *ngIf="mainData.length > 0"
+  [data]="mainData"
+  [remove]="showSource ? ['ID'] : ['ID','SOURCE']"
+  button="delete"
+  (buttonClick)='mainButtonClick($event)'
+></app-table>
+  <app-table
+    *ngIf="deletedData.length > 0 && showDelete"
+    [data]="deletedData" 
+    [remove]="showSource ? ['ID'] : ['ID','SOURCE']"
+    button="restore"
+    (buttonClick)='deleteButtonClick($event)'
+  ></app-table>
+<div>

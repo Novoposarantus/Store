@@ -1,0 +1,53 @@
+<div>
+    <header>
+        <h1>Welcome</h1>
+    </header>
+    <main>
+        <nav [class]="showNav ? '' : 'hidden'">
+            <ul class="list-group">
+                <li (click)="router.navigateByUrl('/createProduct')"
+                    class="list-group-item" 
+                    *ngIf="createProduct">
+                    Create Product
+                </li>
+                <li class="list-group-item"
+                    (click)="router.navigateByUrl('/')">
+                    Products
+                </li>
+                <li class="list-group-item" 
+                    (click)="router.navigateByUrl('/login')"
+                    *ngIf="!isAuth">
+                    Login
+                </li>
+                <li class="list-group-item" 
+                    (click)="logout()"
+                    *ngIf="isAuth">
+                    Logout
+                </li>
+                <li (click)="router.navigateByUrl('/accessUsers')"
+                    class="list-group-item" 
+                    *ngIf="accessUsers">
+                    Access Users
+                </li>
+                <li (click)="router.navigateByUrl('/roleMenu')"
+                    class="list-group-item" 
+                    *ngIf="roleMenu">
+                    Role Menu
+                </li>
+                <li (click)="router.navigateByUrl('/userMenu')"
+                    class="list-group-item" 
+                    *ngIf="userMenu">
+                    User Menu
+                </li>
+            </ul>
+        </nav>
+        <div class="content">
+            <div class="d-flex justify-content-center align-items-center">
+            <div [class]="showLoadingIndicator ? '' : 'hidden'"><div class="loader"></div></div>
+            </div>
+            <div [class]="showLoadingIndicator ? 'hidden' : ''">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </main>
+</div>

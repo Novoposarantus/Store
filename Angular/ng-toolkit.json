@@ -1,0 +1,7 @@
+{
+  "universal": {
+    "project": "react",
+    "skipInstall": false,
+    "directory": "."
+  }
+}

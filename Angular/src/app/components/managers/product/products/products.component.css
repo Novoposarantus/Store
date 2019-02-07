@@ -1,0 +1,23 @@
+.btn{
+    margin: 5px 0;
+  }
+  .main{
+    display: flex;
+  }
+  .header{
+    margin: 20px 10px;
+  }
+  .flip-enter-active{
+    animation: Show 0.5s linear;
+  }
+  .flip-leave-active{
+    animation: Hide 0.5s linear;
+  }
+  @keyframes Hide{
+    from{opacity: 1;}
+    to{opacity: 0;}
+  }
+  @keyframes Show {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }

@@ -1,0 +1,36 @@
+ <table class="table table-bordered" *ngIf="viewTable">
+  <thead>
+      <tr>
+          <td *ngFor="let item of (data | currentData:remove)[0] | keys">
+              {{jsUcfirst(item.key)}}
+          </td>
+          <td *ngIf="button"></td>
+      </tr>
+      <tr>
+          <td *ngFor='let item of (data | currentData:remove)[0] | keys'>
+              <input  *ngIf="getInputType(item.value) == 'text'"
+                      type="text"
+                      [(ngModel)]="filter[item.key]">
+               <input  *ngIf="getInputType(item.value) == 'checkbox'"
+                      type="checkbox"
+                      [checked] = "filter[item.key]"
+                      (change)="filter[item.key] = !filter[item.key]">     
+          </td>
+          <td *ngIf="button"></td>
+      </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let item of (data | currentData:remove) | filterItems:filter" >
+          <td *ngFor="let column of item | keys"
+              [class]="getClass(column.value)"
+              >
+          {{column.value}}</td>
+          <td *ngIf="button">
+              <button (click)="onClick($event,item)"
+                      class="btn btn-success">
+              {{button}}
+              </button>
+          </td>
+      </tr>
+  </tbody>
+</table>
