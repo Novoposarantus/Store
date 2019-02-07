@@ -1,0 +1,9 @@
+.flex{
+    display: flex;
+}
+.block{
+    display: block;
+}
+.buttons{
+    padding-top: 100px;
+}
