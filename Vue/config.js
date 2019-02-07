@@ -1,0 +1,18 @@
+export default Object.freeze({
+    server: "http://localhost:61130/ProductData",
+    createURL: "http://localhost:61130/CreateProduct",
+    deleteURL: "http://localhost:61130/DeleteProduct",
+    login: "http://localhost:61130/token",
+    secret: "http://localhost:61130/secret",
+    registration: "http://localhost:61130/registration",
+    admin: "http://localhost:61130/admin",
+    accessData: "http://localhost:61130/AccessData",
+    getPermissionsForUser: "http://localhost:61130/GetPermissions",
+    getAllPermissions: "http://localhost:61130/RoleManager/GetPermissions",
+    getAllRoles: "http://localhost:61130/RoleManager/GetRoles",
+    updateRole: "http://localhost:61130/RoleManager/UpdateRole",
+    saveRole: "http://localhost:61130/RoleManager/AddRole",
+    deleteRole : "http://localhost:61130/RoleManager/DeleteRole",
+    getAllUsers : "http://localhost:61130/UserManager/GetUsers",
+    updateUser : "http://localhost:61130/UserManager/UpdateUser",
+  })
